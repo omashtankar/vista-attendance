@@ -1,0 +1,8 @@
+# Local credentials
+.streamlit/secrets.toml
+
+# Local Python environment and generated files
+venv/
+.venv/
+__pycache__/
+*.py[cod]

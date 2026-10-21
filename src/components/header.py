@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import streamlit as st
 
 def header_home():
@@ -13,7 +15,7 @@ def header_dashboard():
 
     c1,c2=st.columns(2,vertical_alignment='center',gap='xxlarge')
     with c1:
-        st.image("/Users/omashtankar/Project/Snapclass/src/images/VISTA.svg",width=100)
+        st.image(Path(__file__).resolve().parent.parent / "images" / "VISTA.svg", width=100)
 
     with c2:
         if c2.button("Go back Home", width="stretch", type='secondary', key='loginbackbtn', shortcut="control+backspace"):

@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import streamlit as st
 
 from src.ui.base_layout import style_background_dashboard
@@ -31,7 +33,7 @@ def student_dashboard():
     student_id=student_data['student_id']
     st.subheader(f"""Welcome, {student_data['name']}""")
     with c1:
-        st.image("/Users/omashtankar/Project/Snapclass/src/images/VISTA.svg",width=100)
+        st.image(Path(__file__).resolve().parent.parent / "images" / "VISTA.svg", width=100)
 
     with c2:
         if st.button("Logout", width="stretch", type='secondary', key='loginbackbtn', shortcut="control+backspace"):

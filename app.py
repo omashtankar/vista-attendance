@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import streamlit as st
 
 from src.screens.teacher_screen import teacher_screen
@@ -12,7 +14,7 @@ def main():
 
     st.set_page_config(
         page_title="Vista-Attandance",
-        page_icon="/Users/omashtankar/Project/Snapclass/src/images/VISTA.svg"
+        page_icon=str(Path(__file__).parent / "src" / "images" / "VISTA.svg")
     )
     if 'login_type' not in st.session_state:
         st.session_state['login_type'] = None
